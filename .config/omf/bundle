@@ -1,0 +1,6 @@
+package fasd
+package nodenv
+package pyenv
+package vi-mode
+theme agnoster
+theme default
