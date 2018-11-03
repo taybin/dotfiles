@@ -1,6 +1,8 @@
+package config
 package fasd
 package nodenv
 package pyenv
+package tmux-zen
 package vi-mode
 theme agnoster
 theme default
