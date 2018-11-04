@@ -1,1 +1,4 @@
-.dotfiles/.rdebugrc
+set autolist
+set autoeval
+set autoreload
+set forcestep
