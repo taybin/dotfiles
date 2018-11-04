@@ -1,0 +1,10 @@
+#
+# ~/.editrc --ttp
+#     Enable vi mode. Use tab for word completion. This customizes behavior of libedit
+#     editline(3) which is used in various interactive python sessions on osx. For word
+#     completion, this configuration does not work for some python versions (e.g., 2.7.5)
+#     due to a known bug. Use of a newer python version (e.g., 2.7.8) is recommended.
+#
+bind -v
+bind "^R" em-inc-search-prev
+bind '\t' rl_complete
