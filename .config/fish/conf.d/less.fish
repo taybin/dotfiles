@@ -1,3 +1,1 @@
-function less
-    command less -X $argv
-end
+alias less="less -X"
