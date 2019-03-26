@@ -15,11 +15,13 @@ brew 'fish'
 brew 'git'
 brew 'gnupg'
 brew 'jq'
+brew 'kubernetes-helm'
 brew 'mas'
 brew 'neovim'
 brew 'tmux'
 brew 'wget'
 brew 'yadm'
+brew 'zlib'
 
 # fonts
 cask 'font-input'
