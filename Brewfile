@@ -4,7 +4,6 @@ cask_args appdir: '/Applications'
 # install casks
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
-tap 'homebrew/cask-versions'
 
 # packages
 brew 'awscli'
@@ -27,9 +26,10 @@ brew 'zlib'
 cask 'font-input'
 
 # Casks
-cask '1password6'
+cask '1password'
 cask 'docker'
 cask 'dropbox'
+cask 'java'
 cask 'skype'
 cask 'spotify'
 cask 'iterm2'
