@@ -27,10 +27,12 @@ cask 'font-input'
 
 # Casks
 cask '1password'
+cask 'anylist'
 cask 'docker'
 cask 'dropbox'
 cask 'iterm2'
 cask 'java'
+cask 'paw'
 cask 'postico'
 cask 'skype'
 cask 'spotify'
