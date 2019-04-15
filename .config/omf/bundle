@@ -5,3 +5,4 @@ package tmux-zen
 package virtualfish
 theme agnoster
 theme default
+theme spacefish
