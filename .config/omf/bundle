@@ -1,7 +1,6 @@
 package asdf
 package config
 package fasd
-package https://github.com/zimski/ssh_agent
 package tmux-zen
 package virtualfish
 theme agnoster
