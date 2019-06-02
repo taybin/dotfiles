@@ -282,8 +282,8 @@ set -g mouse on
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
-# set -g status-keys vi
-# set -g mode-keys vi
+set -g status-keys vi
+set -g mode-keys vi
 
 # replace C-b by C-a instead of using both prefixes
 # set -gu prefix2
@@ -294,6 +294,11 @@ set -g mouse on
 
 # move status line to top
 #set -g status-position top
+
+# Copy selection on drag end event, but do not cancel copy mode and do not clear selection
+# clear select on subsequence mouse click
+bind -T copy-mode-vi MouseDragEnd1Pane send -X copy-selection
+bind -T copy-mode-vi MouseDown1Pane select-pane \; send -X clear-selection
 
 # -- colors --------------------------------------------------------------------
 # take from https://github.com/samoshkin/tmux-config/blob/master/tmux/tmux.conf
