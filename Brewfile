@@ -14,9 +14,9 @@ brew 'fish'
 brew 'git'
 brew 'gnupg'
 brew 'jq'
-brew 'kubernetes-helm'
 brew 'mas'
 brew 'neovim'
+brew 'pgcli'
 brew 'tmux'
 brew 'wget'
 brew 'yadm'
@@ -28,6 +28,7 @@ cask 'font-input'
 # Casks
 cask '1password'
 cask 'anylist'
+cask 'dash'
 cask 'docker'
 cask 'dropbox'
 cask 'iterm2'
@@ -43,4 +44,5 @@ cask 'visual-studio-code'
 
 # Mac Apple Store
 mas '2do', id: 477670270
+mas 'kindle', id: 405399194
 mas 'xcode', id: 497799835
