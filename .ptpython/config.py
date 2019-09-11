@@ -99,7 +99,7 @@ def configure(repl):
     repl.enable_input_validation = True
 
     # Use this colorscheme for the code.
-    repl.use_code_colorscheme('pastie')
+    #repl.use_code_colorscheme('pastie')
 
     # Set color depth (keep in mind that not all terminals support true color).
 
@@ -110,12 +110,6 @@ def configure(repl):
 
     # Syntax.
     repl.enable_syntax_highlighting = True
-
-    # Install custom colorscheme named 'my-colorscheme' and use it.
-    """
-    repl.install_ui_colorscheme('my-colorscheme', _custom_ui_colorscheme)
-    repl.use_ui_colorscheme('my-colorscheme')
-    """
 
     # Add custom key binding for PDB.
     """
@@ -155,13 +149,3 @@ def configure(repl):
         b.insert_text(' ')
     """
 
-
-# Custom colorscheme for the UI. See `ptpython/layout.py` and
-# `ptpython/style.py` for all possible tokens.
-_custom_ui_colorscheme = {
-    # Blue prompt.
-    Token.Layout.Prompt:                          'bg:#eeeeff #000000 bold',
-
-    # Make the status toolbar red.
-    Token.Toolbar.Status:                         'bg:#ff0000 #000000',
-}

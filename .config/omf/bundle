@@ -2,7 +2,5 @@ package asdf
 package config
 package fasd
 package tmux-zen
-package virtualfish
 theme agnoster
 theme default
-theme spacefish
