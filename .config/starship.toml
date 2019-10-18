@@ -1,2 +1,5 @@
 [character]
 use_symbol_for_status = true
+
+[kubernetes]
+disabled = false
