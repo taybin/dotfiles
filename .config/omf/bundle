@@ -2,5 +2,4 @@ package asdf
 package config
 package fasd
 package tmux-zen
-theme agnoster
 theme default
