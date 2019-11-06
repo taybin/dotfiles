@@ -1,5 +1,8 @@
 package asdf
 package config
 package fasd
+package pisces
+package spark
 package tmux-zen
+package weather
 theme default
