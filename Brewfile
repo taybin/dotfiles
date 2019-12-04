@@ -8,6 +8,7 @@ tap 'homebrew/cask-fonts'
 # packages
 brew 'awscli'
 brew 'coreutils'
+brew 'ctags'
 brew 'diff-so-fancy'
 brew 'fasd'
 brew 'fish'
