@@ -37,6 +37,7 @@ Plug 'neomake/neomake'
 Plug 'scrooloose/nerdTree'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-surround'
+Plug 'Yggdroot/indentLine'
 " Automatic generation of CTags
 Plug 'vim-scripts/vim-misc' | Plug 'xolox/vim-easytags'
 " Automatic update of CTags
@@ -54,6 +55,8 @@ Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " EditorConfig
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
+
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 else
@@ -61,6 +64,7 @@ else
   Plug 'roxma/nvim-yarp'
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
+
 Plug 'ervandew/supertab'
 
 Plug 'deoplete-plugins/deoplete-jedi'
@@ -85,7 +89,7 @@ set expandtab
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing).
 if has('nvim')
-    call neomake#configure#automake('nrwi', 500)
+   call neomake#configure#automake('nrwi', 500)
 endif
 
 let g:deoplete#enable_at_startup = 1
@@ -100,7 +104,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let g:SuperTabDefaultCompletionType = "<C-n>"
 
 nmap <C-n> :NERDTreeToggle<CR>
-" nmap <C-b> :TagbarToggle<CR>
+nmap <C-b> :TagbarToggle<CR>
 
 set tags=./tags,.vimtags,~/.vim/tags;
 set conceallevel=1
