@@ -347,3 +347,6 @@ set -g @tpm_plugins '              \
 # github_username/plugin_name    \
 # git@github.com/user/plugin     \
 # git@bitbucket.com/user/plugin  \
+
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+#run -b '~/.tmux/plugins/tpm/tpm'
