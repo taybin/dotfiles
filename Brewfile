@@ -51,3 +51,4 @@ cask 'visual-studio-code'
 mas '2do', id: 477670270
 mas 'kindle', id: 405399194
 mas 'xcode', id: 497799835
+mas 'dayone', id: 1055511498
