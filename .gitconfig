@@ -142,3 +142,5 @@
 	process = git-lfs filter-process
 [include]
   path = .gitconfig.user
+[pull]
+	rebase = false
