@@ -141,3 +141,6 @@
   required = true
 [include]
   path = .gitconfig.user
+[user]
+	email = taybin@taybin.com
+	name = Taybin Rutkin
