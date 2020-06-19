@@ -136,11 +136,11 @@
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
   enabled = true
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 [include]
   path = .gitconfig.user
-[user]
-	email = taybin@taybin.com
-	name = Taybin Rutkin
+[pull]
+	rebase = false

@@ -14,11 +14,11 @@ brew 'fish'
 brew 'git'
 brew 'gnupg'
 brew 'jq'
+brew 'lsd'
 brew 'mas'
 brew 'neovim'
 brew 'peco'
 brew 'pgcli'
-brew 'pipenv'
 brew 'ripgrep'
 brew 'starship'
 brew 'tmux'
@@ -27,7 +27,7 @@ brew 'yadm'
 brew 'zlib'
 
 # fonts
-cask 'font-input'
+cask 'font-jetbrainsmono-nerd-font'
 
 # Casks
 cask '1password'
