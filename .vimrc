@@ -1,7 +1,6 @@
 if has('nvim')
   let vimplugdir='~/.config/nvim/plugged'
   let vimautoloaddir='~/.config/nvim/autoload'
-  " TODO: pip2 install neovim
   " TODO: pip3 install neovim
 else
   let vimplugdir='~/.vim/plugged'
@@ -86,10 +85,29 @@ set softtabstop =4
 set shiftwidth  =4
 set expandtab
 
+" close quickfix window on close
+augroup my_neomake_qf
+    autocmd!
+    autocmd QuitPre * if &filetype !=# 'qf' | lclose | endif
+augroup END
+
+function! MyOnBattery()
+  if has('macunix')
+    return match(system('pmset -g batt'), "Now drawing from 'Battery Power'") != -1
+  elseif has('unix')
+    return readfile('/sys/class/power_supply/AC/online') == ['0']
+  endif
+  return 0
+endfunction
+
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing).
 if has('nvim')
-   call neomake#configure#automake('nrwi', 500)
+  if MyOnBattery()
+    call neomake#configure#automake('w')
+  else
+    call neomake#configure#automake('nrwi', 500)
+  endif
 endif
 
 let g:deoplete#enable_at_startup = 1
@@ -141,8 +159,3 @@ augroup omnifuncs
   " autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup end
 
-" close quickfix window on close
-augroup my_neomake_qf
-    autocmd!
-    autocmd QuitPre * if &filetype !=# 'qf' | lclose | endif
-augroup END

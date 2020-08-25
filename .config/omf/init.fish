@@ -1,6 +1,7 @@
 set -xg PATH ~/bin $PATH
 
 set -xg EDITOR vim
+set -xg KUBE_EDITOR nvim
 set -xg VISUAL vim
 
 set -xg PYTHONDONTWRITEBYTECODE 1
