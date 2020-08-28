@@ -6,10 +6,12 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 
 # packages
+brew 'bat'
 brew 'coreutils'
 brew 'ctags'
 brew 'diff-so-fancy'
 brew 'fasd'
+brew 'fd'
 brew 'fish'
 brew 'git'
 brew 'gnupg'
