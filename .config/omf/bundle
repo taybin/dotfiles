@@ -1,6 +1,8 @@
 package asdf
 package aws
 package config
+package https://github.com/ryoppippi/fish-poetry
+package https://github.com/sentriz/fish-pipenv
 package pisces
 package spark
 package weather

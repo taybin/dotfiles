@@ -1,5 +1,5 @@
 [character]
-use_symbol_for_status = true
+error_symbol = "[✖](bold red)"
 
 [kubernetes]
 disabled = false
@@ -15,7 +15,7 @@ discharging_symbol = ""
 [conda]
 symbol = " "
 
-[docker]
+[docker_context]
 symbol = " "
 
 [elixir]
@@ -29,9 +29,6 @@ symbol = " "
 
 [golang]
 symbol = " "
-
-[haskell]
-symbol = " "
 
 [hg_branch]
 symbol = " "
