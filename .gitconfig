@@ -144,3 +144,7 @@
   path = .gitconfig.user
 [pull]
 	rebase = false
+[init]
+	defaultBranch = main
+[commit]
+#	gpgsign = true
