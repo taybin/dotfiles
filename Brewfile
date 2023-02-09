@@ -7,8 +7,6 @@ tap 'homebrew/cask-fonts'
 
 # packages
 brew 'awscli'
-brew 'aws-iam-authenticator'
-brew 'azure-cli'
 brew 'bat'
 brew 'coreutils'
 brew 'ctags'

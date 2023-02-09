@@ -1,4 +1,4 @@
-set -xg PATH ~/bin $PATH
+set -xg PATH ~/bin ~/.local/bin $PATH
 
 set -xg EDITOR vim
 set -xg KUBE_EDITOR nvim

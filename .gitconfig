@@ -138,13 +138,15 @@
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-  required = true
+    required = true
 	process = git-lfs filter-process
 [include]
-  path = .gitconfig.user
+    path = .gitconfig.user
 [pull]
 	rebase = false
 [init]
 	defaultBranch = main
 [commit]
-#	gpgsign = true
+	gpgsign = true
+[user]
+	name = Taybin Rutkin

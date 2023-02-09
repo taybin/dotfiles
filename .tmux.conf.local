@@ -272,7 +272,7 @@ tmux_conf_copy_to_os_clipboard=true
 
 # -- user customizations -------------------------------------------------------
 # this is the place to override or undo settings
-set-option -g default-shell /usr/local/bin/fish
+set-option -g default-shell /opt/homebrew/bin/fish
 
 # increase history size
 set -g history-limit 10000

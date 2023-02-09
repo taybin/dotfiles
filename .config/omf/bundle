@@ -1,8 +1,5 @@
 package asdf
 package config
-package fasd
-package https://github.com/ryoppippi/fish-poetry
-package https://github.com/sentriz/fish-pipenv
 package pisces
 package spark
 package weather
