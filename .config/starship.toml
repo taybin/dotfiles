@@ -1,4 +1,4 @@
-command_timeout = 2000
+command_timeout = 3000
 
 [character]
 error_symbol = "[✖](bold red)"
@@ -51,7 +51,7 @@ symbol = " "
 symbol = " "
 
 [package]
-symbol = " "
+symbol = "📦 "
 
 [php]
 symbol = " "

@@ -1,5 +1,5 @@
 package config
+package git-flow
 package pisces
 package spark
-package weather
 theme default
