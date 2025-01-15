@@ -1,10 +1,11 @@
-# specify a directory to install
-cask_args appdir: '/Applications'
+# set arguments for all 'brew install --cask' commands
+cask_args appdir: '~/Applications'
 
 # install casks
 tap 'homebrew/cask-fonts'
 
 # packages
+brew 'asdf'
 brew 'awscli'
 brew 'bat'
 brew 'coreutils'
@@ -38,11 +39,13 @@ cask 'font-dejavu-sans-mono-nerd-font'
 cask 'font-inconsolata-nerd-font'
 
 # Casks
-cask '1password'
 cask 'docker'
+cask 'firefox'
+cask "google-chrome"
 cask 'iterm2'
 cask 'postico'
-cask 'visual-studio-code'
+cask 'visual-studio-code' unless system "/usr/local/bin/code", "--failfast"
 
 # Mac Apple Store
-mas 'xcode', id: 497799835
+#mas 'xcode', id: 497_799_835
+mas '1Password', id: 443_987_910
