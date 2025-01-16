@@ -2,7 +2,6 @@
 cask_args appdir: '~/Applications'
 
 # install casks
-tap 'homebrew/cask-fonts'
 
 # packages
 brew 'asdf'
@@ -40,8 +39,8 @@ cask 'font-inconsolata-nerd-font'
 
 # Casks
 cask 'docker'
-cask 'firefox'
-cask "google-chrome"
+#cask 'firefox'
+#cask "google-chrome"
 cask 'iterm2'
 cask 'postico'
 cask 'visual-studio-code' unless system "/usr/local/bin/code", "--failfast"
