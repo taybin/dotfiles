@@ -22,6 +22,7 @@ brew 'lsd'
 brew 'mas'
 brew 'neovim'
 brew 'peco'
+brew 'pinentry-mac'
 brew 'pgcli'
 brew 'ripgrep'
 brew 'starship'
@@ -38,6 +39,7 @@ cask 'font-dejavu-sans-mono-nerd-font'
 cask 'font-inconsolata-nerd-font'
 
 # Casks
+cask '1password', appdir: '/Applications'
 cask 'docker'
 #cask 'firefox'
 #cask "google-chrome"
@@ -47,4 +49,3 @@ cask 'visual-studio-code' unless system "/usr/local/bin/code", "--failfast"
 
 # Mac Apple Store
 #mas 'xcode', id: 497_799_835
-mas '1Password', id: 443_987_910
