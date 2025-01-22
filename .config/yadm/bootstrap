@@ -59,4 +59,7 @@ if [ "$system_type" = "Darwin" ]; then
 
   # always show audio output menu
   defaults write com.apple.controlcenter "NSStatusItem Visible Sound" -int 1
+
+  # turn off airplay receiver which uses port 5000
+  defaults write com.apple.controlcenter.plist AirplayReceiverEnabled -bool false
 fi

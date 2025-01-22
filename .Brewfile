@@ -16,6 +16,7 @@ brew 'fzf'
 brew 'fish'
 brew 'git'
 brew 'gnupg'
+brew 'gpg'
 brew 'graphviz'
 brew 'jq'
 brew 'lsd'
@@ -37,9 +38,11 @@ brew 'zoxide'
 # fonts
 cask 'font-dejavu-sans-mono-nerd-font'
 cask 'font-inconsolata-nerd-font'
+cask 'font-monaspace-nerd-font'
 
 # Casks
 cask '1password', appdir: '/Applications'
+cask '1password-cli'
 cask 'docker'
 #cask 'firefox'
 #cask "google-chrome"

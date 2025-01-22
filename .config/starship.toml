@@ -10,9 +10,11 @@ disabled = false
 symbol = " "
 
 [battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+full_symbol = "• "
+charging_symbol = "⇡ "
+discharging_symbol = "⇣ "
+unknown_symbol = "❓ "
+empty_symbol = "❗ "
 
 [conda]
 symbol = " "
@@ -25,6 +27,9 @@ symbol = " "
 
 [elm]
 symbol = " "
+
+[erlang]
+symbol = "ⓔ "
 
 [git_branch]
 symbol = " "
@@ -48,13 +53,16 @@ symbol = " "
 symbol = " "
 
 [nodejs]
-symbol = " "
+symbol = "[⬢](bold green) "
 
 [package]
 symbol = "📦 "
 
 [php]
 symbol = " "
+
+[pulumi]
+symbol = "🧊 "
 
 [python]
 symbol = " "
@@ -64,3 +72,6 @@ symbol = " "
 
 [rust]
 symbol = " "
+
+[typst]
+symbol = "t "
