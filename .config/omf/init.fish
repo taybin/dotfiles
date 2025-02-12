@@ -1,5 +1,3 @@
-#set -xg PATH $PATH ~/bin ~/.local/bin
-
 set -xg EDITOR vim
 set -xg KUBE_EDITOR nvim
 set -xg VISUAL vim

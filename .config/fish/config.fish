@@ -11,7 +11,20 @@ starship init fish | source
 
 fish_ssh_agent
 
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+# ASDF configuration code
+if test -z $ASDF_DATA_DIR
+    set _asdf_shims "$HOME/.asdf/shims"
+else
+    set _asdf_shims "$ASDF_DATA_DIR/shims"
+end
+
+# Do not use fish_add_path (added in Fish 3.2) because it
+# potentially changes the order of items in PATH
+if not contains $_asdf_shims $PATH
+    set -gx --prepend PATH $_asdf_shims
+end
+set --erase _asdf_shims
+# end ASDF configuration code
 
 # Created by `pipx` on 2022-10-05 17:51:05
 set PATH $PATH /Users/taybin.rutkin/.local/bin
