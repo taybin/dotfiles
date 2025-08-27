@@ -48,6 +48,7 @@ cask 'docker'
 #cask "google-chrome"
 cask 'iterm2'
 cask 'postico'
+cask 'shortcat'
 cask 'visual-studio-code' unless system "/usr/local/bin/code", "--failfast"
 
 # Mac Apple Store
