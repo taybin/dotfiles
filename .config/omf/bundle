@@ -1,7 +1,5 @@
 package config
 package fzf
-package git-flow
 package pisces
 package spark
-package zoxide
 theme default

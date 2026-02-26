@@ -14,6 +14,7 @@
 #   - false (default)
 tmux_conf_preserve_stock_bindings=false
 
+bind | split-window -h
 
 # -- session creation ----------------------------------------------------------
 
@@ -445,6 +446,7 @@ set -g @plugin 'tmux-plugins/tmux-pain-control'
 set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'bimal1988/tmux-plugin-sysstat'
 set -g @plugin 'tmux-plugins/tmux-sessionist'
+set -g @plugin 'egel/tmux-gruvbox'
 
 
 # -- custom variables ----------------------------------------------------------
@@ -463,6 +465,8 @@ set -g @sysstat_cpu_view_tmpl '#[fg=#{cpu.color3}]CPU:#[default] #[fg=#{cpu.colo
 set -g @sysstat_cpu_color_low "$color_level_ok default default"
 set -g @sysstat_cpu_color_medium "$color_level_warn default default"
 set -g @sysstat_cpu_color_stress "white,bold $color_level_stress $color_level_stress"
+
+set -g @tmux-gruvbox 'dark'
 
 # ------------------------------------------------------------------------------
 
