@@ -1,0 +1,28 @@
+{
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "includeCoAuthoredBy": false,
+  "worktree": {
+    "baseRef": "fresh"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/taybin.rutkin/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {
+    "gitlab@claude-plugins-official": false,
+    "typescript-lsp@claude-plugins-official": true,
+    "serena@claude-plugins-official": false,
+    "superpowers@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true
+  },
+  "extraKnownMarketplaces": {},
+  "tui": "fullscreen",
+  "theme": "dark",
+  "editorMode": "vim",
+  "inputNeededNotifEnabled": false,
+  "agentPushNotifEnabled": false,
+  "autoUpdates": false,
+  "model": "claude-fable-5[1m]"
+}
