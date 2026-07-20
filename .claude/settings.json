@@ -3,6 +3,7 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "includeCoAuthoredBy": false,
+  "model": "claude-sonnet-5",
   "worktree": {
     "baseRef": "fresh"
   },
@@ -23,6 +24,5 @@
   "editorMode": "vim",
   "inputNeededNotifEnabled": false,
   "agentPushNotifEnabled": false,
-  "autoUpdates": false,
-  "model": "claude-fable-5[1m]"
+  "autoUpdates": false
 }

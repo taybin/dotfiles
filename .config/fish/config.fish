@@ -11,6 +11,18 @@ starship init fish | source
 
 fish_ssh_agent
 
+# Created by `pipx` on 2022-10-05 17:51:05
+set PATH $PATH $HOME/.local/bin
+
+# pnpm
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+set PATH ~/bin $PATH
+
 # ASDF configuration code
 if test -z $ASDF_DATA_DIR
     set _asdf_shims "$HOME/.asdf/shims"
@@ -26,14 +38,3 @@ end
 set --erase _asdf_shims
 # end ASDF configuration code
 
-# Created by `pipx` on 2022-10-05 17:51:05
-set PATH $PATH /Users/taybin.rutkin/.local/bin
-
-# pnpm
-set -gx PNPM_HOME "/Users/taybin.rutkin/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
-
-set PATH ~/bin $PATH
