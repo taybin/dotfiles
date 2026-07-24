@@ -408,6 +408,7 @@ do
 			operators = false,
 			folds = true,
 		},
+		contrast = "hard",
 	})
 
 	-- Load the colorscheme here.
