@@ -400,7 +400,15 @@ do
 		"https://github.com/ellisonleao/gruvbox.nvim",
 	})
 
-	require("gruvbox").setup()
+	require("gruvbox").setup({
+		italic = {
+			strings = false,
+			emphasis = true,
+			comments = false,
+			operators = false,
+			folds = true,
+		},
+	})
 
 	-- Load the colorscheme here.
 	-- Like many other themes, this one has different styles, and you could load
