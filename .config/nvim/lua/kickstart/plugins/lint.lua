@@ -4,9 +4,15 @@ vim.pack.add({ "https://github.com/mfussenegger/nvim-lint" })
 
 local lint = require("lint")
 lint.linters_by_ft = {
-	markdown = { "markdownlint-cli2", "write_good" }, -- Make sure to install `markdownlint` via mason / npm
+	bash = { "shellcheck" },
+	dockerfile = { "hadolint" },
+	json = { "jsonlint" },
+	makefile = { "checkmake" },
+	markdown = { "markdownlint-cli2", "write_good" },
+	python = { "ruff" },
 	text = { "write_good" }, -- filetype for plain `.txt` files
 	typst = { "write_good" }, -- prose linting; tinymist LSP provides typst diagnostics
+	yaml = { "yamllint" },
 }
 
 -- To allow other plugins to add linters to require('lint').linters_by_ft,

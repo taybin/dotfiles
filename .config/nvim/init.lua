@@ -813,8 +813,12 @@ do
 	local ensure_installed = vim.tbl_keys(servers or {})
 	vim.list_extend(ensure_installed, {
 		-- You can add other tools here that you want Mason to install
-		"write-good", -- prose linter for text, markdown, typst (nvim-lint linter: `write_good`)
+		"hadolint",
+		"jsonlint",
 		"markdownlint-cli2", -- markdown linter (referenced in kickstart/plugins/lint.lua)
+		"shellcheck",
+		"write-good", -- prose linter for text, markdown, typst (nvim-lint linter: `write_good`)
+		"yamllint",
 	})
 
 	require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
@@ -941,7 +945,7 @@ do
 		-- the rust implementation via `'prefer_rust_with_warning'`
 		--
 		-- See `:help blink-cmp-config-fuzzy` for more information
-		fuzzy = { implementation = "lua" },
+		fuzzy = { implementation = "prefer_rust_with_warning" },
 
 		-- Shows a signature help window while you type arguments for a function
 		signature = { enabled = true },
@@ -1038,7 +1042,7 @@ do
 	require("kickstart.plugins.lint")
 	-- require 'kickstart.plugins.autopairs'
 	-- require 'kickstart.plugins.neo-tree'
-	-- require 'kickstart.plugins.gitsigns' -- adds gitsigns recommended keymaps
+	-- require("kickstart.plugins.gitsigns") -- adds gitsigns recommended keymaps
 
 	-- NOTE: You can add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
 	--
