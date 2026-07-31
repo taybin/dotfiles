@@ -746,7 +746,10 @@ do
 		--    https://github.com/pmizio/typescript-tools.nvim
 		--
 		-- But for many setups, the LSP (`ts_ls`) will work just fine
-		-- ts_ls = {},
+		ts_ls = {},
+
+		marksman = {}, -- Markdown LSP
+		tinymist = {}, -- Typst LSP (also provides typst diagnostics)
 
 		stylua = {}, -- Used to format Lua code
 
@@ -810,6 +813,8 @@ do
 	local ensure_installed = vim.tbl_keys(servers or {})
 	vim.list_extend(ensure_installed, {
 		-- You can add other tools here that you want Mason to install
+		"write-good", -- prose linter for text, markdown, typst (nvim-lint linter: `write_good`)
+		"markdownlint-cli2", -- markdown linter (referenced in kickstart/plugins/lint.lua)
 	})
 
 	require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
@@ -833,7 +838,8 @@ do
 			-- You can specify filetypes to autoformat on save here:
 			local enabled_filetypes = {
 				lua = true,
-				-- python = true,
+				typescript = true,
+				python = true,
 			}
 			if enabled_filetypes[vim.bo[bufnr].filetype] then
 				return { timeout_ms = 500 }
@@ -1029,7 +1035,7 @@ do
 	--
 	-- require 'kickstart.plugins.debug'
 	-- require 'kickstart.plugins.indent_line'
-	-- require 'kickstart.plugins.lint'
+	require("kickstart.plugins.lint")
 	-- require 'kickstart.plugins.autopairs'
 	-- require 'kickstart.plugins.neo-tree'
 	-- require 'kickstart.plugins.gitsigns' -- adds gitsigns recommended keymaps
