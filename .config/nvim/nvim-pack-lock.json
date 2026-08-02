@@ -46,6 +46,10 @@
       "rev": "9459d7f41ae77d909579dab0aea2bdd3210fac9f",
       "src": "https://github.com/nvim-mini/mini.nvim"
     },
+    "nvim-autopairs": {
+      "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
     "nvim-lint": {
       "rev": "a219b2c9e5b4765e5c845aba119dad55806fcaf1",
       "src": "https://github.com/mfussenegger/nvim-lint"
@@ -66,6 +70,10 @@
     "org-list.nvim": {
       "rev": "2d6f2985e0312daabb6d06725746f5b8c2e5a002",
       "src": "https://github.com/hamidi-dev/org-list.nvim"
+    },
+    "org-roam.nvim": {
+      "rev": "0240378c92eb0c9d6bc4ccbc8a6046e3c3d02ece",
+      "src": "https://github.com/chipsenkbeil/org-roam.nvim"
     },
     "orgmode": {
       "rev": "f32a06d4b5399dad8bf0478c772bf6c513f02dcf",

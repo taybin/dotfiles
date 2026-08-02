@@ -1,17 +1,17 @@
 vim.pack.add({ "https://github.com/nvim-orgmode/orgmode" })
 require("orgmode").setup({
-	org_agenda_files = "~/org/**/*",
-	org_default_notes_file = "~/org/refile.org",
+	org_agenda_files = "~/orgs/**/*",
+	org_default_notes_file = "~/orgs/refile.org",
 	org_capture_templates = {
 		r = {
 			description = "Repo",
 			template = "* [[%x][%(return string.match('%x', '([^/]+)$'))]]%?",
-			target = "~/org/repos.org",
+			target = "~/orgs/repos.org",
 		},
 		o = {
 			description = "One on One",
 			template = "* %t\n** Their Thoughts\n** My Thoughts\n** Action Items",
-			target = "~/org/meetings/%^{PROMPT}.org",
+			target = "~/orgs/meetings/%^{PROMPT}.org",
 		},
 	},
 })
@@ -39,3 +39,17 @@ require("org-list").setup({
 vim.pack.add({ "https://github.com/nvim-orgmode/telescope-orgmode.nvim" })
 require("telescope-orgmode").setup()
 require("telescope").load_extension("orgmode")
+
+local ext = require("telescope").extensions.orgmode
+vim.keymap.set("n", "<leader>soh", ext.search_headings, { desc = "[S]earch [O]rg [H]eadings" })
+vim.keymap.set("n", "<leader>sot", ext.search_tags, { desc = "[S]earch [O]rg [T]ags" })
+vim.keymap.set("n", "<leader>sor", ext.refile_heading, { desc = "[S]earch [O]rg [R]efile" })
+vim.keymap.set("n", "<leader>soi", ext.insert_link, { desc = "[S]earch [O]rg Insert Link" })
+
+vim.pack.add({ "https://github.com/chipsenkbeil/org-roam.nvim" })
+require("org-roam").setup({
+	directory = "~/orgs/roam",
+	org_files = {
+		"~/orgs",
+	},
+})
