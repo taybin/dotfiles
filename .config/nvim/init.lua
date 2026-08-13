@@ -91,6 +91,20 @@ do
 	-- instead raise a dialog asking if you wish to save the current file(s)
 	-- See `:help 'confirm'`
 	vim.o.confirm = true
+
+	-- [[ Filetype detection ]]
+	-- Neovim already maps `Dockerfile.<something>` to the `dockerfile` filetype, but only
+	-- as a low-priority (`starsetf`) pattern, so a known file extension wins instead:
+	-- `Dockerfile.graphql` was detected as `graphql`, `Dockerfile.pdf` as `pdf`.
+	-- A positive priority makes these patterns beat extension matching.
+	-- NOTE: patterns here are implicitly anchored at both ends, so no `^`/`$`.
+	-- See `:help vim.filetype.add()`
+	vim.filetype.add({
+		pattern = {
+			["[Dd]ockerfile%..*"] = { "dockerfile", { priority = 1 } },
+			["[Cc]ontainerfile%..*"] = { "dockerfile", { priority = 1 } },
+		},
+	})
 end
 
 -- ============================================================
@@ -669,6 +683,11 @@ do
 
 		marksman = {}, -- Markdown LSP
 		tinymist = {}, -- Typst LSP (also provides typst diagnostics)
+
+		-- Docker's official language server: Dockerfiles, compose files and bake files.
+		-- (`dockerls` is the older, Dockerfile-only alternative.)
+		-- hadolint linting is wired up separately in `lua/kickstart/plugins/lint.lua`.
+		docker_language_server = {},
 
 		stylua = {}, -- Used to format Lua code
 
