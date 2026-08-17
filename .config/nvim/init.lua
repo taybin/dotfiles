@@ -349,6 +349,32 @@ do
 	-- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
 	vim.cmd.colorscheme("gruvbox")
 
+	-- Keep the terminal cursor visible on any machine.
+	-- gruvbox (like many themes) defines `Cursor` as `reverse` with no concrete
+	-- bg, so Neovim has no color to hand the terminal and never emits OSC 12 --
+	-- leaving whatever cursor color the terminal is set to, which is invisible
+	-- if it happens to sit close to the background. Deriving an inverse-video
+	-- `Cursor` from `Normal` gives Neovim a real color to send, and following
+	-- ColorScheme keeps it correct if the theme changes.
+	local function sync_cursor_hl()
+		local normal = vim.api.nvim_get_hl(0, { name = "Normal", link = false })
+		if normal.fg and normal.bg then
+			vim.api.nvim_set_hl(0, "Cursor", { fg = normal.bg, bg = normal.fg })
+		end
+	end
+
+	vim.api.nvim_create_autocmd("ColorScheme", { callback = sync_cursor_hl })
+	sync_cursor_hl()
+
+	-- Same shapes as the built-in default; the only change is attaching `Cursor`
+	-- so each mode carries a color with it.
+	vim.opt.guicursor = table.concat({
+		"n-v-c-sm:block-Cursor",
+		"i-ci-ve:ver25-Cursor",
+		"r-cr-o:hor20-Cursor",
+		"t:block-blinkon500-blinkoff500-TermCursor",
+	}, ",")
+
 	-- Highlight todo, notes, etc in comments
 	vim.pack.add({ gh("folke/todo-comments.nvim") })
 	require("todo-comments").setup({ signs = false })

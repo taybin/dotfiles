@@ -3,13 +3,13 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "includeCoAuthoredBy": false,
-  "model": "claude-sonnet-5",
+  "model": "opus",
   "worktree": {
     "baseRef": "fresh"
   },
   "statusLine": {
     "type": "command",
-    "command": "bash /Users/taybin.rutkin/.claude/statusline-command.sh"
+    "command": "bash $HOME/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "gitlab@claude-plugins-official": false,
