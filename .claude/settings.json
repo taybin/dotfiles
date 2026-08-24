@@ -3,7 +3,6 @@
     "DISABLE_AUTOUPDATER": "1"
   },
   "includeCoAuthoredBy": false,
-  "model": "opus",
   "worktree": {
     "baseRef": "fresh"
   },
@@ -13,10 +12,12 @@
   },
   "enabledPlugins": {
     "gitlab@claude-plugins-official": false,
-    "typescript-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
     "serena@claude-plugins-official": false,
     "superpowers@claude-plugins-official": true,
-    "pyright-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {},
   "tui": "fullscreen",
@@ -24,5 +25,6 @@
   "editorMode": "vim",
   "inputNeededNotifEnabled": false,
   "agentPushNotifEnabled": false,
-  "autoUpdates": false
+  "autoUpdates": false,
+  "model": "opus"
 }
