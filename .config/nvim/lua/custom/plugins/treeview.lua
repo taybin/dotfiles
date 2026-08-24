@@ -6,6 +6,10 @@ vim.pack.add({
 require("nvim-tree").setup({
 	disable_netrw = true,
 	hijack_cursor = true,
+	-- Follow `:cd`. neovim-project switches projects with `nvim_set_current_dir`,
+	-- which fires DirChanged; without this the tree keeps the root it was first
+	-- opened with and shows the previous project's files.
+	sync_root_with_cwd = true,
 })
 
 -- Documented by which-key under the existing `<leader>t` [T]oggle group.
