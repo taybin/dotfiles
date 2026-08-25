@@ -54,6 +54,10 @@
       "rev": "89d253a6c68af60b49570044591d5b8701866601",
       "src": "https://github.com/Shatur/neovim-session-manager"
     },
+    "nui.nvim": {
+      "rev": "10fc361835c856ba4233ef5ea135b919bf3dce97",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
+    },
     "nvim-autopairs": {
       "rev": "7b9923abad60b903ece7c52940e1321d39eccc79",
       "src": "https://github.com/windwp/nvim-autopairs"
@@ -94,6 +98,10 @@
     "orgmode": {
       "rev": "f32a06d4b5399dad8bf0478c772bf6c513f02dcf",
       "src": "https://github.com/nvim-orgmode/orgmode"
+    },
+    "package-info.nvim": {
+      "rev": "e2469495215f576771b4567786b3c5709e98d87a",
+      "src": "https://github.com/vuki656/package-info.nvim"
     },
     "plenary.nvim": {
       "rev": "74b06c6c75e4eeb3108ec01852001636d85a932b",
