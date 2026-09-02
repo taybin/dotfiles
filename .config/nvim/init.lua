@@ -316,7 +316,8 @@ do
 		-- Document existing key chains
 		spec = {
 			{ "<leader>s", group = "[S]earch", mode = { "n", "v" } },
-			{ "<leader>so", group = "[O]rg", mode = { "n" } },
+			{ "<leader>r", group = "[R]oam", mode = { "n" } },
+			{ "<leader>so", group = "[S]earch [O]rg", mode = { "n" } },
 			{ "<leader>t", group = "[T]oggle" },
 			{ "<leader>h", group = "Git [H]unk", mode = { "n", "v" } }, -- Enable gitsigns recommended keymaps first
 			{ "gr", group = "LSP Actions", mode = { "n" } },

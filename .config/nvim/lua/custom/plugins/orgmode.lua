@@ -48,7 +48,7 @@ require("org-bullets").setup()
 vim.pack.add({ "https://github.com/hamidi-dev/org-list.nvim" })
 require("org-list").setup({
 	mapping = {
-		key = "<leader>olt", -- nvim-orgmode users: you might want to change this to <leader>olt
+		key = "<leader>olt",
 		desc = "Toggle: Cycle through list types",
 	},
 	checkbox_toggle = {
@@ -76,5 +76,8 @@ require("org-roam").setup({
 	directory = org_path("roam"),
 	org_files = {
 		org_dir,
+	},
+	bindings = {
+		prefix = "<leader>r",
 	},
 })
