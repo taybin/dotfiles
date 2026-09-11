@@ -61,6 +61,18 @@ require("orgmode").setup({
 })
 vim.lsp.enable("org")
 
+vim.pack.add({ "https://github.com/taybin/org-crypt.nvim" })
+require("org-crypt").setup({
+	org_crypt_key = nil,
+	org_crypt_tag_matcher = "crypt",
+	mappings = {
+		encrypt_entry = "<leader>oxe",
+		decrypt_entry = "<leader>oxd",
+		encrypt_entries = "<leader>oxE",
+		decrypt_entries = "<leader>oxD",
+	},
+})
+
 vim.pack.add({ "https://github.com/nvim-orgmode/org-bullets.nvim" })
 require("org-bullets").setup()
 
